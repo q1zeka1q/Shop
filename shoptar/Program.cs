@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using shoptar.Data;
+
 namespace shoptar
 {
     public class Program
@@ -9,6 +12,9 @@ namespace shoptar
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            // builder.Services.AddScoped <SpaceshipServices>();
+            builder.Services.AddDbContext<ShoptarContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefultConection")));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
