@@ -1,1 +1,30 @@
-﻿asdsd test 
+﻿@model IEnumerable<shoptar.Models.Spaceships.SpaceshipsIndexViewModel>
+
+	<div class="h1">
+	Spaceships
+	</div>
+	<form method="post">
+		<table class="table table-hover">
+		<thead>
+    <tr>
+				<td scope="col">Nr</td>
+				<td scope="col">Name</td>
+				<td scope="col">Type</td>
+				<td scope="col">Build Date</td>
+				<td scope="col">Crew</td>
+    </tr>
+</thead>
+<tbody>
+	@foreach(var spaceships in Model)
+			{
+				<tr>
+					<td>Nr</td>
+					<td>@spaceships.Name</td>
+					<td>@spaceships.TypeName</td>
+					<td>@spaceships.BuiltDate</td>
+					<td>@spaceships.Crew</td>
+				</tr>
+			}
+		</tbody>
+</table>
+	</form>
