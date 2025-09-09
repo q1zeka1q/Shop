@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using shoptar.ApplicationServices.Services;
+using shoptar.Core.ServiceInterface;
 using shoptar.Data;
 
 namespace shoptar
 {
-    public class Program
+    public class Program 
     {
         public static void Main(string[] args)
         {
@@ -11,6 +13,7 @@ namespace shoptar
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<ISpaceshipsServices, SpaceshipsServices>();
 
             // builder.Services.AddScoped <SpaceshipServices>();
             builder.Services.AddDbContext<ShoptarContext>(options =>

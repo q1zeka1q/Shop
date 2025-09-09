@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\shoptar.ApplicationServices\shoptar.ApplicationServices.csproj" />
     <ProjectReference Include="..\shoptar.Data\shoptar.Data.csproj" />
   </ItemGroup>
 
