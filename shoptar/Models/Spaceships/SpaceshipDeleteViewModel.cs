@@ -1,6 +1,6 @@
 ﻿namespace shoptar.Models.Spaceships
 {
-    public class SpaceshipCreateViewModel
+    public class SpaceshipDeleteViewModel
     {
         public Guid? Id { get; set; }
         public string? Name { get; set; }
